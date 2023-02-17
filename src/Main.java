@@ -51,8 +51,8 @@ public class Main {
             int destinationZip = Integer.parseInt(toParse);
             Address origin = new Address(originStreetNum, originStreetName, originAptNum, originCity, originState, originZip);
             Address destination = new Address(destinationStreetNum, destinationStreetName, destinationAptNum, destinationCity, destinationState, destinationZip);
-            System.out.println(origin);
-            System.out.println(destination);
+            Package parcel = new Package(origin, destination, weight, width, length, height);
+            System.out.println(PostageCalculator.calculatePostage(parcel));
         }
     }
 }
